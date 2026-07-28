@@ -139,20 +139,10 @@ Prateados
 <div class="imagem-produto">
 
 
-<button class="seta esquerda" onclick="voltarColar01()">
-❮
-</button>
-
-
 <img 
 id="imagemColar01"
 src="image/produtos/colares/cl01.jpg"
 alt="Colar G&L Semijoias">
-
-
-<button class="seta direita" onclick="trocarColar01()">
-❯
-</button>
 
 
 </div>
@@ -188,22 +178,11 @@ alt="Colar G&L Semijoias">
 <div class="imagem-produto">
 
 
-<button class="seta esquerda" onclick="voltarColarPrata01()">
-❮
-</button>
-
-
 
 <img 
 id="imagemColarPrata01"
 src="image/produtos/colares/cl2.jpg"
 alt="Colar Prata G&L Semijoias">
-
-
-
-<button class="seta direita" onclick="trocarColarPrata01()">
-❯
-</button>
 
 
 </div>
@@ -237,11 +216,6 @@ alt="Colar Prata G&L Semijoias">
 <div class="imagem-produto">
 
 
-<button class="seta esquerda" onclick="voltarColarPrata01()">
-❮
-</button>
-
-
 
 <img 
 id="imagemColarPrata01"
@@ -249,10 +223,6 @@ src="image/produtos/colares/cl3.jpg"
 alt="Colar Prata G&L Semijoias">
 
 
-
-<button class="seta direita" onclick="trocarColarPrata01()">
-❯
-</button>
 
 
 </div>
@@ -289,141 +259,6 @@ alt="Colar Prata G&L Semijoias">
 
 
 <script>
-
-
-
-// =====================
-// COLAR 01
-// =====================
-
-
-let imagensColar01 = [
-
-
-"image/produtos/colares/colar01.jpg",
-
-
-"image/produtos/colares/colar01-caixa.jpg"
-
-
-];
-
-
-let indiceColar01 = 0;
-
-
-
-
-function trocarColar01(){
-
-
-indiceColar01++;
-
-
-if(indiceColar01 >= imagensColar01.length){
-
-indiceColar01 = 0;
-
-}
-
-
-document.getElementById("imagemColar01").src = imagensColar01[indiceColar01];
-
-
-}
-
-
-
-
-function voltarColar01(){
-
-
-indiceColar01--;
-
-
-if(indiceColar01 < 0){
-
-indiceColar01 = imagensColar01.length - 1;
-
-}
-
-
-document.getElementById("imagemColar01").src = imagensColar01[indiceColar01];
-
-
-}
-
-
-
-
-
-
-
-// =====================
-// COLAR PRATA 01
-// =====================
-
-
-let imagensColarPrata01 = [
-
-
-"image/produtos/colares/pr01.jpg",
-
-
-"image/produtos/colares/pr01-caixa.jpg"
-
-
-];
-
-
-let indiceColarPrata01 = 0;
-
-
-
-
-function trocarColarPrata01(){
-
-
-indiceColarPrata01++;
-
-
-if(indiceColarPrata01 >= imagensColarPrata01.length){
-
-indiceColarPrata01 = 0;
-
-}
-
-
-document.getElementById("imagemColarPrata01").src = imagensColarPrata01[indiceColarPrata01];
-
-
-}
-
-
-
-
-
-function voltarColarPrata01(){
-
-
-indiceColarPrata01--;
-
-
-if(indiceColarPrata01 < 0){
-
-indiceColarPrata01 = imagensColarPrata01.length - 1;
-
-}
-
-
-document.getElementById("imagemColarPrata01").src = imagensColarPrata01[indiceColarPrata01];
-
-
-}
-
-
-
-
 
 
 
@@ -476,42 +311,6 @@ produto.style.display = "none";
 }
 
 
-
-
-
-// BOTÕES ATIVOS
-
-
-let botoesFiltro = document.querySelectorAll(".filtro-btn");
-
-
-
-botoesFiltro.forEach(function(botao){
-
-
-
-botao.addEventListener("click", function(){
-
-
-
-botoesFiltro.forEach(function(b){
-
-
-b.classList.remove("ativo");
-
-
-});
-
-
-
-this.classList.add("ativo");
-
-
-
-});
-
-
-});
 
 
 
