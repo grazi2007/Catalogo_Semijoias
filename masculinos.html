@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<link rel="stylesheet" href="css/style.css">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+<title>Masculinos | G&L Semijoias</title>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+
+<div class="logo">
+
+<img class="logo-img"
+src="image/logo_transparente.png"
+alt="Logo G&L Semijoias">
+
+</div>
+
+
+<nav class="menu">
+
+<ul>
+
+<li>
+<a href="index.html">Home</a>
+</li>
+
+
+<li>
+<a href="colares.html">Colares</a>
+</li>
+
+
+<li>
+<a href="brincos.html">Brincos</a>
+</li>
+
+<li>
+<a href="sobrenos.html">Sobre nós</a>
+</li>
+
+</ul>
+
+</nav>
+
+
+<a class="btn-whatsapp" href="contato.html">
+💬 Fale no WhatsApp
+</a>
+
+
+</header>
+
+
+
+
+
+<section class="catalogo">
+
+
+<div class="titulo-produtos">
+
+<h1>Sessão Masculina</h1>
+
+<p>Acessórios de aço que traduzem personalidade, elegância e autenticidade. Peças escolhidas para homens que valorizam detalhes e carregam estilo em cada momento</p>
+
+</div>
+
+
+
+
+
+<!-- FILTROS -->
+
+
+<div class="filtros">
+
+
+<button class="filtro-btn ativo" onclick="filtrarProdutos('todos')">
+Todos
+</button>
+
+
+<button class="filtro-btn" onclick="filtrarProdutos('dourado')">
+Dourados
+</button>
+
+
+<button class="filtro-btn" onclick="filtrarProdutos('prateado')">
+Prateados
+</button>
+
+
+</div>
+
+
+
+
+
+<!-- PRODUTOS -->
+
+
+<div class="lista-produtos">
+
+
+
+
+
+<!-- ===================== -->
+<!-- COLAR 01 -->
+<!-- ===================== -->
+
+
+<div class="produto-card dourado">
+
+
+<div class="imagem-produto">
+
+
+<button class="seta esquerda" onclick="voltarColar01()">
+❮
+</button>
+
+
+<img 
+id="imagemColar01"
+src="image/produtos/colares/clMsc01.jpg"
+alt="Colar G&L Semijoias">
+
+
+<button class="seta direita" onclick="trocarColar01()">
+❯
+</button>
+
+
+</div>
+
+
+
+
+<h3>Colar Dourado Malha Figaro Unissex</h3>
+
+
+<p>Design atemporal,brilho intenso e acabamento sofisticado.Ideal para usar no dia a dia ou dar um destaque especial no visual.</p>
+
+
+
+<a href="#" class="btn-whatsapp">
+
+💬 Tenho interesse
+
+</a>
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<script>
+
+
+// =====================
+// FILTRO DE PRODUTOS
+// =====================
+
+
+function filtrarProdutos(categoria){
+
+
+let produtos = document.querySelectorAll(".produto-card");
+
+
+
+produtos.forEach(function(produto){
+
+
+if(categoria == "todos"){
+
+
+produto.style.display = "block";
+
+
+}
+
+
+else if(produto.classList.contains(categoria)){
+
+
+produto.style.display = "block";
+
+
+}
+
+
+else{
+
+
+produto.style.display = "none";
+
+
+}
+
+
+
+});
+
+
+}
+
+
+
+
+
+// BOTÕES ATIVOS
+
+
+let botoesFiltro = document.querySelectorAll(".filtro-btn");
+
+
+
+botoesFiltro.forEach(function(botao){
+
+
+
+botao.addEventListener("click", function(){
+
+
+
+botoesFiltro.forEach(function(b){
+
+
+b.classList.remove("ativo");
+
+
+});
+
+
+
+this.classList.add("ativo");
+
+
+
+});
+
+
+});
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
