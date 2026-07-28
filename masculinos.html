@@ -137,20 +137,10 @@ Prateados
 <div class="imagem-produto">
 
 
-<button class="seta esquerda" onclick="voltarColar01()">
-❮
-</button>
-
-
 <img 
 id="imagemColar01"
 src="image/produtos/colares/clMsc01.jpg"
 alt="Colar G&L Semijoias">
-
-
-<button class="seta direita" onclick="trocarColar01()">
-❯
-</button>
 
 
 </div>
@@ -240,44 +230,6 @@ produto.style.display = "none";
 
 
 }
-
-
-
-
-
-// BOTÕES ATIVOS
-
-
-let botoesFiltro = document.querySelectorAll(".filtro-btn");
-
-
-
-botoesFiltro.forEach(function(botao){
-
-
-
-botao.addEventListener("click", function(){
-
-
-
-botoesFiltro.forEach(function(b){
-
-
-b.classList.remove("ativo");
-
-
-});
-
-
-
-this.classList.add("ativo");
-
-
-
-});
-
-
-});
 
 
 
