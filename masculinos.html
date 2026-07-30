@@ -81,7 +81,7 @@ alt="Logo G&L Semijoias">
 <div class="titulo-produtos">
 
 <h1>Sessão Masculina</h1>
-
+<br
 <p>Acessórios de aço que traduzem personalidade, elegância e autenticidade. Peças escolhidas para homens que valorizam detalhes e carregam estilo em cada momento</p>
 
 </div>
@@ -231,7 +231,32 @@ produto.style.display = "none";
 
 }
 
+// BOTÕES ATIVOS
 
+
+let botoesFiltro = document.querySelectorAll(".filtro-btn");
+
+
+botoesFiltro.forEach(function(botao){
+
+
+botao.addEventListener("click", function(){
+
+
+botoesFiltro.forEach(function(b){
+
+b.classList.remove("ativo");
+
+});
+
+
+this.classList.add("ativo");
+
+
+});
+
+
+});
 
 </script>
 

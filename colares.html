@@ -81,7 +81,7 @@ alt="Logo G&L Semijoias">
 <div class="titulo-produtos">
 
 <h1>Colares</h1>
-
+<br>
 <p>
 Peças delicadas para transformar seus momentos com elegância.
 </p>
@@ -311,7 +311,32 @@ produto.style.display = "none";
 }
 
 
+// BOTÕES ATIVOS
 
+
+let botoesFiltro = document.querySelectorAll(".filtro-btn");
+
+
+botoesFiltro.forEach(function(botao){
+
+
+botao.addEventListener("click", function(){
+
+
+botoesFiltro.forEach(function(b){
+
+b.classList.remove("ativo");
+
+});
+
+
+this.classList.add("ativo");
+
+
+});
+
+
+});
 
 
 </script>

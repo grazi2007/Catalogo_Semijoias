@@ -81,7 +81,7 @@ alt="Logo G&L Semijoias">
 <div class="titulo-produtos">
 
 <h1>Sessão Infantil</h1>
-
+<br>
 <p>Pequenos detalhes, grandes momentos. Peças delicadas para acompanhar a infância com encanto, carinho e muito brilho.</p>
 
 </div>
@@ -131,7 +131,7 @@ Prateados
 <!-- ===================== -->
 
 
-<div class="produto-card prata">
+<div class="produto-card prateado">
 
 
 <div class="imagem-produto">
@@ -149,7 +149,7 @@ alt="Colar G&L Semijoias">
 <h3>Conjunto Prateado Malha Figaro</h3>
 
 
-<p>Um conjunto charmoso,brilhante e cheia de estilos!!Feita com elos especiais intercalados que dão um toque moderno e super fofo para o visual das pequenas.</p>
+<p>Um conjunto charmoso,brilhante e cheia de estilos!! Feita com elos especiais intercalados que dão um toque moderno e super fofo para o visual das pequenas.</p>
 
 
 
@@ -226,8 +226,34 @@ produto.style.display = "none";
 });
 
 
-}
 
+}
+// BOTÕES ATIVOS
+
+
+let botoesFiltro = document.querySelectorAll(".filtro-btn");
+
+
+botoesFiltro.forEach(function(botao){
+
+
+botao.addEventListener("click", function(){
+
+
+botoesFiltro.forEach(function(b){
+
+b.classList.remove("ativo");
+
+});
+
+
+this.classList.add("ativo");
+
+
+});
+
+
+});
 
 </script>
 
